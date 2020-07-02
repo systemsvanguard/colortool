@@ -1,0 +1,202 @@
+/* Portfolio site for fullstack developer Ryan Hunter | ryan@RyanHunter.org | GitHub handle : SystemsVanguard  */
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #333;
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/*
+h1, h2, h3, h4, h5, h6 {
+  color:#159957;
+}
+*/
+
+/* Headers */
+.header {
+  background-color: #159957;
+  background-image: linear-gradient(120deg, #155799, #159957);
+}
+
+.header h1 {
+  color: #fff;
+  margin: 0;
+}
+
+.myheading {
+  color:#00008b;
+  font-weight:bold;
+  text-transform: uppercase;
+}
+.myheading2 {
+  color:#008b00;
+  font-weight:bold;
+  text-transform: uppercase;
+}
+.myheading3 {
+  color:#008b00;
+  font-weight:bold;
+}
+.myheading4 {
+  color:#00008b;
+  font-weight:bold;
+  font-size: 1.1em;
+  text-align: center;
+  font-family: 'Lato', Arial, Verdana, sans-serif;
+}
+
+/* Footer */
+.footer {
+  background-color: #ffffe0; /* light yellow */
+  background-image: url("../images/background.jpg");
+}
+.footerTitle {
+  color:#00008b; 
+  font-weight:bold;
+  font-family: "Mukta Malar", Helvetica, sans-serif;
+  font-size: 1.875em;
+}
+
+/* Misc */
+.mySlides {
+  display: none;
+  /* color: #ffffff; */
+  color: red;
+  font-weight: bold;
+}
+.antispam { display:none;}
+.mybold {
+  font-weight: bold;
+}
+.primetext {
+  color:#008b00;
+}
+.map_location {
+  background-color: #f8f8ff; /* ghost white */
+}
+.wisequotes {
+  background-color: #b0c4de; /* light steel blue */
+  padding: 15px 5px;
+}
+.carouselSlides {
+  background-color: #f0fff0;  /* HoneyDew  */
+}
+.wrap { border-right: 0.08em solid #fff}
+
+
+/* Styling for the Quote of the Day Script */
+.quotetext {
+  font-weight: bold;
+  color: #00008b; /* blue */
+  font-size: 125%;
+  font-family: 'Mukta Malar', sans-serif;
+}
+.quotesource {
+  font-style: italic;
+  color: #008b00; /* green */
+  font-size: 90%;
+  font-family: 'Lato', sans-serif;
+}
+
+/* remove link underlines  */
+.link_no_underline:link {
+  text-decoration: none;
+}
+.link_no_underline:visited {
+  text-decoration: none;
+}
+.link_no_underline:hover {
+  text-decoration: none;
+}
+
+/* Sundry */
+code {
+  background-color: #f3f6fa;
+  color: #567482;
+  display: inline-block;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  padding: 3px;
+  word-break: normal;
+  white-space: pre;
+}
+
+.mynavbar {
+  color: #00008b;
+}
+.mynavbar:hover {
+  color: #468b00;
+  background-color: #d9d9ff;
+}
+/* Button Opacity Hover Effect */
+.buttonMain {
+  border: 1px solid #00008b;
+  background-color: #00008b;
+  color: white;
+}
+.buttonMain:hover {
+  border: 2px solid #0000f6;
+  background-color: #0000f6;
+  color: white;
+  opacity: 0.7;
+  -moz-box-shadow: 0 0 10px #0000f6;
+  -webkit-box-shadow: 0 0 10px #0000f6;
+  box-shadow: 0 0 10px #0000f6;
+}
+.cardEffect1
+{ 
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: #ffefd5 #ffefd5 #ffefd5 #ffefd5;
+  background-color: #ffefd5; /* papaya whip  */
+  border-radius: 5px;  
+}
+.cardEffect1:hover
+{
+/* Deep blue left border bar, with all other borders light purple. Light purple div background. */   
+  border-style: solid;
+  border-width: 1px 1px 1px 3px;
+  border-color: #0000cd #0000cd #0000cd #00008b;
+  background-color: #87cefa;  /* light sky blue  */
+  padding-left: 6px;
+  border-radius: 5px;  
+}
+.cardEffect2
+{ 
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: #ffffe0 #ffffe0 #ffffe0 #ffffe0;
+  background-color: #f2f2f2; /* light gray  */
+  border-radius: 5px;  
+}
+.cardEffect2:hover
+{
+/* Deep purple left border bar, with all other borders deep blue. Light blue div background. */   
+  border-style: solid;
+  border-width: 1px 1px 1px 3px;
+  border-color: #32cd32 #32cd32 #32cd32 #008000;
+  background-color: #adff2f;  /* green yellow  */
+  padding-left: 6px;
+  border-radius: 5px;  
+}
+.portfolioCardEffect
+{ 
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: #ffffe0 #ffffe0 #ffffe0 #ffffe0;
+  background-color: #fffafa; /* snow white  */
+  border-radius: 5px;  
+}
+.portfolioCardEffect:hover
+{
+/* Deep purple left border bar, with all other borders deep blue. Light blue div background. */   
+  border-style: solid;
+  border-width: 1px 1px 1px 3px;
+  border-color: #32cd32 #32cd32 #32cd32 #008000;
+  background-color: #ffffe0;  /* light yellow  */
+  border-radius: 5px;  
+}
+

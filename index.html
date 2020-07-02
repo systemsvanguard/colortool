@@ -1,0 +1,151 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>RyanHunter.ca</title>
+  <link rel="stylesheet" href="/app/libs/w3/w3.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato|Mukta+Malar" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+  <link rel="stylesheet" href="/app/libs/sweetalert2/sweetalert2.min.css">
+  <link rel="stylesheet" href="/app/app.css">
+  <link rel="icon" type="image/png" href="/images/favicon.png" />   
+</head>
+<body>
+  <!-- Navbar ~ start -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+	<a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i>
+	</a>
+	<a href="http://ryanhunter.ca/" class="w3-bar-item w3-button w3-indigo w3-padding-large"><i class="fas fa-home w3-margin-right"></i> RyanHunter.ca 
+	</a>
+	<a href="http://ryanhunter.ca/skills/" class="w3-bar-item w3-button w3-padding-large w3-hide-small">
+	  <i class="fas fa-user-tie" style="width:30px; color:#ffffff;"></i> SKILLS
+	</a>
+	<a href="http://ryanhunter.ca/code/" class="w3-bar-item w3-button w3-padding-large w3-hide-small">
+	  <i class="fas fa-code" style="width:30px; color:#ffffff;"></i> CODE
+	</a>
+	<a href="http://ryanhunter.ca/blog/" class="w3-bar-item w3-button w3-padding-large w3-hide-small">
+	  <i class="fas fa-pencil-alt" style="width:30px; color:#ffffff;"></i> BLOG
+	</a>
+	<a href="http://ryanhunter.ca/contact/" class="w3-bar-item w3-button w3-padding-large w3-hide-small">
+	  <i class="fas fa-phone" style="width:30px; color:#ffffff;"></i> CONTACT
+	</a>
+  </div>
+</div>
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="http://ryanhunter.ca/skills/" class="w3-bar-item w3-button w3-padding-large">SKILLS</a>
+  <a href="http://ryanhunter.ca/code/" class="w3-bar-item w3-button w3-padding-large">CODE</a>
+  <a href="http://ryanhunter.ca/blog/" class="w3-bar-item w3-button w3-padding-large">BLOG</a>
+  <a href="http://ryanhunter.ca/contact/" class="w3-bar-item w3-button w3-padding-large">CONTACT</a>
+  <a href="http://ryanhunter.ca/" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+</div>
+<!--/ Navbar - end -->
+
+
+
+  <div class="content">
+    <div id="colortoolapp" class="w3-container w3-center" style="margin-top:46px">	
+	  <h1 class="w3-wide w3-center w3-text-indigo"><strong>Color Tool ~ Color Names & Hex Numbers</strong></h1>
+
+
+	  <!-- Auto-complete Hex Values 
+	  Build an Auto-Complete component that allows the user to enter a Hex value, and the middle component of the card immediately below changes the CSS background colour to match the hex value entered.   A lot of data validation and error trapping will be required, espec where erroneous characters are entered.  To help, use  vuejsexamples.com/suggestion-list-input-for-vue-js  ----->
+
+		  <!--
+		  <div class="w3-card-4" style="width:70%;">
+			<header class="w3-container w3-blue">
+			  <h4>Enter a Hex Value</h4>      
+			  <div class="w3-row-padding">
+				<div class="w3-twothird">
+				  <input class="w3-input w3-border w3-round-large w3-hover-blue w3-animate-input" type="text" id="hexvalue" name="hexvalue" maxlength="7" size="9" placeholder="#00008B" pattern="#[0-9A-Za-z]{3,6}" value="#00008B"  autocomplete="on" required />
+				  <label class="w3-text-pink">Hex Value like #00008B</label>
+				</div>
+				<div class="w3-third">
+				  <button class="w3-button w3-round-large w3-pink w3-ripple w3-padding">Send</button>
+				</div>
+			  </div>
+			  <br />      
+			</header>
+			<div class="w3-container w3-hover-shadow" style="background-color:white">
+			  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt <br /><br /><br /><br /></p>
+			</div>
+			<footer class="w3-container w3-blue">
+			  <h5><strong>Instructions</strong> </h5>
+			  <p>Enter a Hex Value in the text box above to see the respective colour directly above.  &#128516;  </p>
+			</footer>
+		  </div>	  
+		  -->
+	  <!----/ Auto-complete Hex Values ---> 
+
+	  <h3 class="w3-center w3-text-pink">These 148 colors below and their respective Hex values, are supported by all major web browsers. <strong>Enjoy!</strong> &#128151;  &#128516;   &#128151;</h3>
+	  <br />
+	  
+		  <div v-for="i in rowCount" class="w3-row">
+			<div class="w3-col m3 l3" v-for="item in itemCountInRow(i)" :key="item.id" >
+			  <!----
+			  The 4 data field/values in the color data array are: id, name, hex, and display.
+			  Use Vue.js 'v-bind:style' to integrate Vue data values into the CSS styling.
+			  Reference : https://vuejs.org/v2/guide/class-and-style.html
+			  -->
+			  
+			  <div class="w3-card w3-hover-shadow w3-padding w3-margin w3-center w3-round-xlarge"v-bind:style="{color: item.display ,backgroundColor: item.hex , borderColor: item.hex , borderWidth:'4px', borderStyle:'solid'}"  >
+				<h3>{{ item.name }}</h3>
+				<p>{{ item.hex }}</p>
+			  </div>		
+			  <!----
+			  Phase 2: Build a feature to sort by/ orderBy color name or by hex value, on button click. 
+			  'orderBy' filter was removed in Vue ersion 2+. Sad! Instead, research : https://www.npmjs.com/package/vue2-filters AND  https://vuejs.org/v2/guide/migration.html#Replacing-the-orderBy-Filter 
+			  ---->	
+			  <!----------------->
+			</div>
+		  </div>
+		  <br />
+	</div>
+  </div>
+  
+  
+
+  <footer class="w3-container w3-padding-32 w3-center w3-large footer">
+    <a href="/" class="w3-button w3-indigo w3-hover-blue w3-margin w3-xlarge w3-round">
+	  <i class="fa fa-arrow-up w3-margin-right"></i>Top 
+	</a>
+    <div class="footerTitle">
+	  <a href="/" class="link_no_underline">RyanHunter.ca</a>
+	</div>  
+	  <p>
+	  Copyright &copy; 2015 ~ 2020 | All rights reserved.  Coding Portfolio at <a href="/" class="link_no_underline"><strong>RyanHunter.ca</strong></a><br />  
+	  A portfolio site built using <a href="https://vuejs.org/">Vue.js</a>, <a href="https://www.w3schools.com/w3css/">W3.css</a>, <a href="https://fonts.google.com/">Google Fonts</a>, <a href="https://fontawesome.com/">FontAwesome 5</a>, JavaScript, CSS, HTML5, and lots of love <span style="color:#ff0000;">&#9829;</span> <span style="color:#00008b;">&#9825;</span> <span style="color:#00008b;">&#9829;</span>!!  <br />
+	  GitHub username <span style="color:#00008b;font-weight: bold;font-style: italic;"><a href="https://github.com/systemsvanguard" class="link_no_underline">SystemsVanguard</a></span>. 
+	  </p>
+	  <p>
+		<a href="http://ryanhunter.ca/" class="link_no_underline">Home</a> | 
+		<a href="http://ryanhunter.ca/skills/" class="link_no_underline">Skills</a> | 
+		<a href="http://ryanhunter.ca/code/" class="link_no_underline">Portfolio</a> | 
+		<a href="http://ryanhunter.ca/blog/" class="link_no_underline">Blog</a> | 
+		<a href="http://ryanhunter.ca/contact/" class="link_no_underline">Contact</a>   
+	  </p> 
+  
+  
+	  <div class="w3-xlarge w3-section">
+		<a href="https://github.com/systemsvanguard"><i class="fab fa-github-alt w3-hover-opacity" style="color:#00008b;" title="GitHub"></i></a>	
+		<a href="https://stackoverflow.com/users/1247476/funtasticapps"><i class="fab fa-stack-overflow  w3-hover-opacity"  style="color:#ff8c00;" title="StackOverflow"></i></a>	
+		<a href="https://stackexchange.com/users/1296565/funtasticapps"><i class="fab fa-stack-exchange w3-hover-opacity" style="color:#00008b;" title="StackExchange"></i></a>	
+		<a href="https://www.reddit.com/user/funtasticapps"><i class="fab fa-reddit-alien w3-hover-opacity" style="color:#b22222;" title="Reddit"></i></a>	
+		<a href="https://www.linkedin.com/in/ryan-hunter-4a166013/"><i class="fab fa-linkedin  w3-hover-opacity" style="color:#00008b;" title="LinkedIn"></i></a>  
+		<a href="https://www.meetup.com/members/41724382/"><i class="fab fa-meetup w3-hover-opacity" style="color:#ff0000;" title="MeetUp"></i></a>	
+	  </div>
+	  <br />
+  </footer>  
+
+  
+  
+  <!-- JS files -->
+  <script src="/app/libs/vue/vue.js"></script> 
+  <script src="/app/app.js"></script>
+  <script src="/app/colortool.js"></script>  
+  <script src="/app/libs/sweetalert2/sweetalert2.min.js"></script>
+</body>
+</html>
