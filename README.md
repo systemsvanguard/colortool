@@ -8,7 +8,7 @@ Live **Site Demo** ~ [Color Tool](http://colortool.ryanhunter.ca/)
 
 
 ## Steps to Install 
-- No special steps.  Uses a CDN so Internet access is require.  
+- No special steps.  Uses a CDN so Internet access is required.  
 - git clone https://github.com/systemsvanguard/colortool.git  
 - cd colortool
 - Any web server will do , or simply run from folder. 
